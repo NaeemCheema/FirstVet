@@ -1,7 +1,10 @@
 # FirstVet
 
 - Run local/dev server
-    - yarn && yarn start
+    - yarn && yarn start:dev
 
-- Build and run production server
-    - yarn && yarn build:production
+- Generate production build 
+    - yarn build
+
+- Run production server
+    - yarn start:prod
