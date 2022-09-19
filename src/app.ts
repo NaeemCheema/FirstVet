@@ -1,4 +1,4 @@
-import { appointmentData, appointmentType } from "./app.types";
+import { appointmentData, appointmentType } from "@src/app.types";
 const data = require('../data.json');
 
 const formateAppoitmentTime = (appointmentTime: Date) => {
