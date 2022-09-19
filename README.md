@@ -4,4 +4,4 @@
     - yarn && yarn start
 
 - Build and run production server
-    - yarn run build:production
+    - yarn && yarn build:production

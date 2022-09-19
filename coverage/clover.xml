@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1663598799912" clover="3.2.0">
+  <project timestamp="1663598799912" name="All files">
+    <metrics statements="31" coveredstatements="19" conditionals="4" coveredconditionals="3" methods="9" coveredmethods="4" elements="44" coveredelements="26" complexity="0" loc="31" ncloc="31" packages="1" files="2" classes="2"/>
+    <file name="app.ts" path="/Users/naeem/Test/FirstVet/src/app.ts">
+      <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <line num="1" count="0" type="stmt"/>
+      <line num="3" count="0" type="stmt"/>
+      <line num="5" count="0" type="stmt"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="26" count="0" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="28" count="0" type="stmt"/>
+      <line num="31" count="0" type="stmt"/>
+    </file>
+    <file name="appointments.ts" path="/Users/naeem/Test/FirstVet/src/appointments.ts">
+      <metrics statements="20" coveredstatements="19" conditionals="4" coveredconditionals="3" methods="5" coveredmethods="4"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="29" count="4" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="32" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="36" count="1" type="stmt"/>
+      <line num="38" count="18" type="cond" truecount="2" falsecount="0"/>
+      <line num="39" count="18" type="cond" truecount="0" falsecount="1"/>
+      <line num="40" count="0" type="stmt"/>
+      <line num="47" count="18" type="stmt"/>
+      <line num="48" count="18" type="stmt"/>
+      <line num="54" count="1" type="stmt"/>
+      <line num="57" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
