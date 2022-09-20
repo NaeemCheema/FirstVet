@@ -1,18 +1,18 @@
-const data = require('./appointment.test.json');
-const data1 = require('./appointment1.test.json');
+const schedule1 = require('./fixtures/schedule1.test.json');
+const schedule2 = require('./fixtures/schedule2.test.json');
 
-import findAppointments from '../src/appointments';
+import findAppointments from '../src/helpers/appointments';
 
-describe('Appointment test', () => {
+describe('Schedule with 1 break', () => {
     it('should pass', () => {
-        const appointments = findAppointments(data);
+        const appointments = findAppointments(schedule1);
         expect(appointments.length).toBe(0);
     });
 })
 
-describe('Appointment test1', () => {
+describe('Schedule with 2 breaks', () => {
     it('should pass', () => {
-        const appointments = findAppointments(data1);
+        const appointments = findAppointments(schedule2);
         expect(appointments.length).toBe(17);
     });
 })

@@ -1,8 +1,8 @@
-import { appointmentData, appointmentType } from "@src/app.types";
+import { ScheduleType, AppointmentType } from "@src/types";
 
-const findAppointments = (data: appointmentData[]) => {
-	const appointments: appointmentType = [];
-	data.forEach((schedule: appointmentData) => {
+const findAppointments = (data: ScheduleType[]) => {
+	const appointments: AppointmentType = [];
+	data.forEach((schedule: ScheduleType) => {
 		const shiftStartDateTime = new Date(`${schedule.startDate} ${schedule.startTime}`).getTime();
 		const shiftEndDateTime = new Date(`${schedule.endDate} ${schedule.endTime}`).getTime();
 

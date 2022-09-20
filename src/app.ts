@@ -1,8 +1,8 @@
-import findAppointments from "@src/appointments";
-import { appointmentType } from "@src/app.types";
+import findAppointments from "@src/helpers/appointments";
+import { AppointmentType } from "@src/types";
 const data = require('../data.json');
 
-const formateAppoitmentTime = (appointmentTime: Date) => {
+const formatAppoitmentTime = (appointmentTime: Date) => {
 	return new Date(appointmentTime).toLocaleTimeString([], {
 		hour: '2-digit',
 		minute: '2-digit',
@@ -10,13 +10,13 @@ const formateAppoitmentTime = (appointmentTime: Date) => {
 };
 
 /* Output veterinarian appoitments */
-const showAppointments = (appointments: appointmentType) => {
+const showAppointments = (appointments: AppointmentType) => {
 	appointments.forEach((appointment) => {
 		console.log(
 			appointment.shiftDate,
-			formateAppoitmentTime(appointment.appoitmnetStart),
+			formatAppoitmentTime(appointment.appoitmnetStart),
 			'-',
-			formateAppoitmentTime(appointment.appoitmentEnd),
+			formatAppoitmentTime(appointment.appoitmentEnd),
 			appointment.employeeName
 		);
 	});
@@ -24,7 +24,7 @@ const showAppointments = (appointments: appointmentType) => {
 
 /* Find and show available veterinarian appoitments */
 const findAndShow = () => {
-	const available: appointmentType = findAppointments(data);
+	const available: AppointmentType = findAppointments(data);
 	showAppointments(available);
 };
 
