@@ -1,4 +1,4 @@
-import findAppointments from "@src/helpers/appointments";
+import findAppointments from "@src/helpers/findAppointments";
 import { AppointmentType } from "@src/types";
 const schedules = require('@src/data/schedules.json');
 
