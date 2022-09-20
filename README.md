@@ -11,7 +11,7 @@
     - yarn start:prod
 
 # Run unit tests
-    - yarn test
+- yarn test
     - To watch all test
         - yarn test:watch
     - To watch uni tests coverage
