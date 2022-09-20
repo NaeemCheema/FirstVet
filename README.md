@@ -9,3 +9,10 @@
 
 - Run production server
     - yarn start:prod
+
+# Run unit tests
+    - yarn test
+    - To watch all test
+        - yarn test:watch
+    - To watch uni tests coverage
+        - yarn test:coverage
