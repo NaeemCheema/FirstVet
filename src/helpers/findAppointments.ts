@@ -2,7 +2,7 @@ import { ScheduleType, AppointmentType } from "@src/types";
 
 const FIFTEEN_MINUTES = 15 * 60000;
 
-const getTimestamp = (dateTime: string) => {
+const getTimestamp = (dateTime: string | number) => {
 	return new Date(dateTime).getTime();
 }
 
@@ -39,8 +39,8 @@ const findAppointments = (data: ScheduleType[]): AppointmentType => {
 			if (!status) {
 				appointments.push({
 					shiftDate: new Date(shiftStartDateTime).toLocaleDateString('en-CA'),
-					appoitmnetStart: new Date(shiftStart),
-					appoitmentEnd: new Date(nextShift),
+					appoitmnetStart: getTimestamp(shiftStart),
+					appoitmentEnd: getTimestamp(nextShift),
 					employeeName: schedule.employeeName,
 				});
 			}
@@ -50,7 +50,7 @@ const findAppointments = (data: ScheduleType[]): AppointmentType => {
 	});
 
 	/* Sort appoitments by appoitment start time */
-	return appointments.sort((a, b) => a.appoitmnetStart.getTime() - b.appoitmnetStart.getTime());
+	return appointments.sort((a, b) => a.appoitmnetStart - b.appoitmnetStart);
 };
 
 export default findAppointments;

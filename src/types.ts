@@ -1,7 +1,7 @@
 export type AppointmentType = {
   shiftDate: string;
-  appoitmnetStart: Date;
-  appoitmentEnd: Date;
+  appoitmnetStart: number;
+  appoitmentEnd: number;
   employeeName: string;
 }[];
 

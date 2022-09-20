@@ -2,7 +2,7 @@ import findAppointments from "@src/helpers/findAppointments";
 import { AppointmentType } from "@src/types";
 const schedules = require('@src/data/schedules.json');
 
-const formatAppoitmentTime = (appointmentTime: Date) => {
+const formatAppoitmentTime = (appointmentTime: number) => {
 	return new Date(appointmentTime).toLocaleTimeString([], {
 		hour: '2-digit',
 		minute: '2-digit',
