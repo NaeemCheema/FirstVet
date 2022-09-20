@@ -1,6 +1,6 @@
 import findAppointments from "@src/helpers/appointments";
 import { AppointmentType } from "@src/types";
-const schedules = require('@src/fixtures/schedules.json');
+const schedules = require('@src/data/schedules.json');
 
 const formatAppoitmentTime = (appointmentTime: Date) => {
 	return new Date(appointmentTime).toLocaleTimeString([], {
@@ -24,8 +24,13 @@ const showAppointments = (appointments: AppointmentType) => {
 
 /* Find and show available veterinarian appoitments */
 const findAndShow = () => {
-	const available: AppointmentType = findAppointments(schedules);
-	showAppointments(available);
+	try{
+		const available = findAppointments(schedules);
+		showAppointments(available);
+	}
+	catch(error) {
+		return error;
+	}
 };
 
 findAndShow();
