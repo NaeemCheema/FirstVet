@@ -1,7 +1,7 @@
 const schedule1 = require('../fixtures/schedule1.test.json');
 const schedule2 = require('../fixtures/schedule2.test.json');
 
-import findAppointments from '../../src/helpers/appointments';
+import findAppointments from '../../src/helpers/findAppointments';
 
 describe('Schedule with 1 break', () => {
     it('should pass', () => {

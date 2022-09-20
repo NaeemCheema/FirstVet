@@ -1,5 +1,6 @@
 # FirstVet
-
+    Algorithm which is finding suitable appointments for veterinarian
+# Set up 
 - Run local/dev server
     - yarn && yarn start:dev
 
