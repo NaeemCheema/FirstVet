@@ -24,13 +24,9 @@ const showAppointments = (appointments: AppointmentType) => {
 
 /* Find and show available veterinarian appoitments */
 const findAndShow = () => {
-	try{
-		const available = findAppointments(schedules);
-		showAppointments(available);
-	}
-	catch(error) {
-		return error;
-	}
+	/* We can add try catch here to validate JSON */
+	const available = findAppointments(schedules);
+	showAppointments(available);
 };
 
 findAndShow();
