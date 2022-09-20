@@ -1,11 +1,11 @@
-export type appointmentType = {
+export type AppointmentType = {
   shiftDate: string;
   appoitmnetStart: Date;
   appoitmentEnd: Date;
   employeeName: string;
 }[];
 
-export type appointmentData = {
+export type ScheduleType = {
   scheduleId: number;
   startDate: Date;
   startTime: Date;
