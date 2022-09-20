@@ -11,9 +11,9 @@ const findBreaks = (schedule: ScheduleType) => {
 
 	for (const [key, value] of Object.entries(schedule)) {
 		if(!(key.includes('startBreak'))) continue ;
-		const start = new Date(`${schedule.startDate} ${value}`).getTime();
+		const start = getTimestamp(`${schedule.startDate} ${value}`);
 		const nextIndex = Object.keys(schedule).indexOf(key) + 1; // find break end key index
-		const end = new Date(`${schedule.startDate} ${Object.values(schedule)[nextIndex]}`).getTime();
+		const end = getTimestamp(`${schedule.startDate} ${Object.values(schedule)[nextIndex]}`);
 		if(end - start !== 0) breaks.push([start, end]);
 	}
 	return breaks;
