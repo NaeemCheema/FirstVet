@@ -7,27 +7,15 @@ const getTimestamp = (dateTime: string) => {
 }
 
 const findBreaks = (schedule: ScheduleType) => {
-	let breaks = [
-		[
-			new Date(`${schedule.startDate} ${schedule.startBreak}`).getTime(),
-			new Date(`${schedule.startDate} ${schedule.endBreak}`).getTime(),
-		],
-		[
-			new Date(`${schedule.startDate} ${schedule.startBreak2}`).getTime(),
-			new Date(`${schedule.startDate} ${schedule.endBreak2}`).getTime(),
-		],
-		[
-			new Date(`${schedule.startDate} ${schedule.startBreak3}`).getTime(),
-			new Date(`${schedule.startDate} ${schedule.endBreak3}`).getTime(),
-		],
-		[
-			new Date(`${schedule.startDate} ${schedule.startBreak4}`).getTime(),
-			new Date(`${schedule.startDate} ${schedule.endBreak4}`).getTime(),
-		],
-	];
+	const breaks = [];
 
-	/* ignore empty breaks */
-	breaks = breaks.filter(([start, end]) => end - start !== 0);
+	for (const [key, value] of Object.entries(schedule)) {
+		if(!(key.includes('startBreak'))) continue ;
+		const start = new Date(`${schedule.startDate} ${value}`).getTime();
+		const nextIndex = Object.keys(schedule).indexOf(key) + 1; // find break end key index
+		const end = new Date(`${schedule.startDate} ${Object.values(schedule)[nextIndex]}`).getTime();
+		if(end - start !== 0) breaks.push([start, end]);
+	}
 	return breaks;
 }
 
