@@ -3,7 +3,8 @@ import { ScheduleType, AppointmentType } from "@src/types";
 const FIFTEEN_MINUTES = 15 * 60000;
 
 const getTimestamp = (dateTime: string | number) => {
-	return new Date(dateTime).getTime();
+	/* convert time into timestamp */
+	return +new Date(dateTime);
 }
 
 const findBreaks = (schedule: ScheduleType) => {
@@ -32,7 +33,7 @@ const findAppointments = (data: ScheduleType[]): AppointmentType => {
 
 		let shiftStart = shiftStartDateTime;
 		const shiftEnd = shiftEndDateTime;
-		let nextShift = new Date(shiftStart + FIFTEEN_MINUTES).getTime();
+		let nextShift = getTimestamp(shiftStart + FIFTEEN_MINUTES);
 		while (Math.max(shiftStart, nextShift) <= shiftEnd) {
 			/* verify shift is valid or it is break time */
 			const status = breaks.find(([start, end]) => nextShift > start && nextShift <= end);
@@ -45,7 +46,7 @@ const findAppointments = (data: ScheduleType[]): AppointmentType => {
 				});
 			}
 			shiftStart = nextShift;
-			nextShift = new Date(shiftStart + FIFTEEN_MINUTES).getTime();
+			nextShift = getTimestamp(shiftStart + FIFTEEN_MINUTES);
 		}
 	});
 
