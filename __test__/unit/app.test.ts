@@ -6,25 +6,25 @@ import findAppointments from "../../src/helpers/findAppointments";
 const expectedAppointments = [
 	{
 		shiftDate: "2020-04-29",
-		appoitmnetStart: 1588147200000,
+		appoitmentStart: 1588147200000,
 		appoitmentEnd: 1588148100000,
 		employeeName: "John Doe",
 	},
 	{
 		shiftDate: "2020-04-29",
-		appoitmnetStart: 1588148100000,
+		appoitmentStart: 1588148100000,
 		appoitmentEnd: 1588149000000,
 		employeeName: "John Doe",
 	},
 	{
 		shiftDate: "2020-04-29",
-		appoitmnetStart: 1588161600000,
+		appoitmentStart: 1588161600000,
 		appoitmentEnd: 1588162500000,
 		employeeName: "John Doe",
 	},
 	{
 		shiftDate: "2020-04-29",
-		appoitmnetStart: 1588162500000,
+		appoitmentStart: 1588162500000,
 		appoitmentEnd: 1588163400000,
 		employeeName: "John Doe",
 	},

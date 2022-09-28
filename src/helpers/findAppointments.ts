@@ -40,7 +40,7 @@ const findAppointments = (data: ScheduleType[]): AppointmentType => {
 			if (!status) {
 				appointments.push({
 					shiftDate: new Date(shiftStartDateTime).toLocaleDateString('en-CA'),
-					appoitmnetStart: getTimestamp(shiftStart),
+					appoitmentStart: getTimestamp(shiftStart),
 					appoitmentEnd: getTimestamp(nextShift),
 					employeeName: schedule.employeeName,
 				});
@@ -51,7 +51,7 @@ const findAppointments = (data: ScheduleType[]): AppointmentType => {
 	});
 
 	/* Sort appoitments by appoitment start time */
-	return appointments.sort((a, b) => a.appoitmnetStart - b.appoitmnetStart);
+	return appointments.sort((a, b) => a.appoitmentStart - b.appoitmentStart);
 };
 
 export default findAppointments;

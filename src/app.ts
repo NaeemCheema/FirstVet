@@ -14,7 +14,7 @@ const showAppointments = (appointments: AppointmentType) => {
 	appointments.forEach((appointment) => {
 		console.log(
 			appointment.shiftDate,
-			formatAppoitmentTime(appointment.appoitmnetStart),
+			formatAppoitmentTime(appointment.appoitmentStart),
 			'-',
 			formatAppoitmentTime(appointment.appoitmentEnd),
 			appointment.employeeName
